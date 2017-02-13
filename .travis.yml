@@ -10,3 +10,12 @@ script: make && make test
 cache:
     directories:
         - tools/emsdk_portable/
+
+deploy:
+  provider: releases
+  api_key:
+    secure: "zMEHbX0QE25aYe2OkfbLjQgWQz/pW9daN9nP2407YkYZTXofugoDUmb9F2oCas3htK04f7yHCxoU1p0sHZlHWZxMv7i+vJ8sQtpxhCmHVft+WU0su7Y+3ffhJjWvfVF7m+5V1Ff6Ljc19b7qsLIAyvszEhxkQ+/5VlNdsMbfsoakHJ2ZTPPg6qrfomUBcGA7lQWiYKra+Z94Z/SeG7JtVhrwgQi2lbU8W6WPbSY9ennBQsK6MBskEkyLjYjtGMLWIcMglDJsc9FX7bKl+iGyUPR5/T6WPLlIlfNRyZVGyrA3wowO0ki5U14z0AgSWJt7Sv/zCA0e5A58yi4Q7JuHWoC0zcdeUYlch3iR7NB49NwU6SbEGCxaoy6Wt/DRB7iUj69cP5ZxohjjegSqdlZ/RPVFCW5iXIdRWbbJLUL+LOpz5pcwlO5ERhqS5O7jaBqvP3NEblAo1c3JJ4CFk5qO49sI30ZvEb+tDusNRQDtUGyybeD6n65DdiQsJpIRBrrZ1FKGNxDb4e/yT0RODNVwPookaUngf71zRZoyrXdtDuTtvBBrLRp98P2mAaggwFif9z38XKSlyNbPwawSJAKmZ2kUhwM7XURtZc94kMhzuXlqEFrPclIF9GQN9k8V46YoQ9op2A6sDyEfeHqHlYuwH8NaZSVC7rq3SD/PfefIoa0="
+  file: build/CuraEngine.js
+  skip_cleanup: true
+  on:
+    tags: true
