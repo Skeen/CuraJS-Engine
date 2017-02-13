@@ -5,7 +5,7 @@ sudo: false
 
 install: ./tools/emscripten.sh
 
-script: source tools/emsdk_portable/emsdk_env.sh && make && make test
+script: source ./tools/emsdk_portable/emsdk_env.sh && make && make test
 
 cache:
     directories:
