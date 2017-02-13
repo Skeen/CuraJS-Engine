@@ -1,9 +1,9 @@
 language: cpp
 
 dist: trusty
-sudo: false
+sudo: required
 
-install: ./tools/emscripten.sh
+install: ./tools/cmake.sh && ./tools/emscripten.sh
 
 script: make && make test
 
