@@ -1,3 +1,9 @@
 language: cpp
 
+install: ./tools/emscripten.sh
+
 script: make && make test
+
+cache:
+    directories:
+        - tools/
