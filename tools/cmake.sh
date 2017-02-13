@@ -1,6 +1,6 @@
 #!/bin/bash
 
-curl https://cmake.org/files/v3.4/cmake-3.4.3.tar.gz | tar -xvz 
+curl https://cmake.org/files/v3.4/cmake-3.4.3.tar.gz | tar -xz 
 cd cmake-3.4.3/ 
 ./configure 
 make
