@@ -71,7 +71,7 @@ else
 	endif
 endif
 
-all: check-env $(DIRS) $(SOURCES) $(EXECUTABLE)
+all: $(DIRS) $(SOURCES) $(EXECUTABLE)
 
 check-env:
 ifndef EMSCRIPTEN
