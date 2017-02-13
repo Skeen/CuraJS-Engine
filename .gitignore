@@ -16,4 +16,6 @@ CuraEngine
 build/*
 *~
 NUL
+emsdk_portable/
+tools/emsdk_portable/
 CuraEngine.layout

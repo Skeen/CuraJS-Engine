@@ -3,14 +3,10 @@ language: cpp
 dist: trusty
 sudo: required
 
-install: ./tools/cmake.sh && ./tools/emscripten.sh
+install: ./tools/emscripten.sh
 
 script: make && make test
 
 cache:
     directories:
         - tools/emsdk_portable/
-        - tools/cmake-3.4.3/
-        - /usr/local/share/cmake-3.4/
-        - /usr/local/doc/cmake-3.4/
-        - /usr/local/bin/
