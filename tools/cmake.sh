@@ -5,4 +5,4 @@ cd cmake-3.4.3/
 ./configure 
 make
 sudo make install
-update-alternatives --install /usr/bin/cmake cmake /usr/local/bin/cmake 1 --force
+sudo update-alternatives --install /usr/bin/cmake cmake /usr/local/bin/cmake 1 --force

@@ -9,4 +9,8 @@ script: make && make test
 
 cache:
     directories:
-        - tools/
+        - tools/emsdk_portable/
+        - tools/cmake-3.4.3/
+        - /usr/local/share/cmake-3.4/
+        - /usr/local/doc/cmake-3.4/
+        - /usr/local/bin/
