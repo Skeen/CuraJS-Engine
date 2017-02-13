@@ -1,5 +1,8 @@
 language: cpp
 
+dist: trusty
+sudo: false
+
 install: ./tools/emscripten.sh
 
 script: make && make test
