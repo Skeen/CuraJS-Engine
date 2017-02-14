@@ -32,7 +32,8 @@ ifeq ($(BUILD_TYPE), WEB)
 	CXX = $(EMSCRIPTEN)/emcc
 	SOURCES_RAW += ../$(LIBS_DIR)/clipper/clipper.cpp
 	EXECUTABLE = $(BUILD_DIR)/CuraEngine.html
-	LDFLAGS += -O3 --llvm-lto 3 --memory-init-file 0
+	#LDFLAGS += -O3 --llvm-lto 3 --memory-init-file 0
+	LDFLAGS += --memory-init-file 0
 else
 	CXX = g++
 	LDFLAGS += -Lbuild/ -lclipper
