@@ -19,8 +19,7 @@ else ifeq ($(BUILD_TYPE),RELEASE)
 	CFLAGS+= -O3 -fomit-frame-pointer
 else ifeq ($(BUILD_TYPE),WEB)
 	#CFLAGS+= -O3 --llvm-lto 3 -s NO_EXIT_RUNTIME=1 --memory-init-file 0 -s INVOKE_RUN=0 -s AGGRESSIVE_VARIABLE_ELIMINATION=1
-    CFLAGS+= -O1 -s ASSERTIONS=1
-	#-s ALLOW_MEMORY_GROWTH=1
+    CFLAGS+= -O0 -s ASSERTIONS=1 -s DISABLE_EXCEPTION_CATCHING=0 -s INVOKE_RUN=0 --memory-init-file 0 -s ALLOW_MEMORY_GROWTH=1
 	#TODO: Enable memory init file
 	#TODO: ENable closure compiler
 endif
@@ -33,7 +32,8 @@ ifeq ($(BUILD_TYPE), WEB)
 	SOURCES_RAW += ../$(LIBS_DIR)/clipper/clipper.cpp
 	EXECUTABLE = $(BUILD_DIR)/CuraEngine.html
 	#LDFLAGS += -O3 --llvm-lto 3 --memory-init-file 0
-	LDFLAGS += --memory-init-file 0
+	LDFLAGS += -O0 -s ASSERTIONS=1 -s DISABLE_EXCEPTION_CATCHING=0 -s INVOKE_RUN=0 --memory-init-file 0 -s ALLOW_MEMORY_GROWTH=1
+
 else
 	CXX = g++
 	LDFLAGS += -Lbuild/ -lclipper
