@@ -18,7 +18,8 @@ else ifeq ($(BUILD_TYPE),PROFILE)
 else ifeq ($(BUILD_TYPE),RELEASE)
 	CFLAGS+= -O3 -fomit-frame-pointer
 else ifeq ($(BUILD_TYPE),WEB)
-	CFLAGS+= -O3 --llvm-lto 3 -s NO_EXIT_RUNTIME=1 --memory-init-file 0 -s INVOKE_RUN=0 -s AGGRESSIVE_VARIABLE_ELIMINATION=1
+	#CFLAGS+= -O3 --llvm-lto 3 -s NO_EXIT_RUNTIME=1 --memory-init-file 0 -s INVOKE_RUN=0 -s AGGRESSIVE_VARIABLE_ELIMINATION=1
+    CFLAGS+= -01 -s ASSERTIONS=1
 	#-s ALLOW_MEMORY_GROWTH=1
 	#TODO: Enable memory init file
 	#TODO: ENable closure compiler
