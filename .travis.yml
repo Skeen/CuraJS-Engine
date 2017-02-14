@@ -7,7 +7,7 @@ install: ./tools/emscripten.sh
 
 before_script: ./tools/emscripten_debug.sh
 
-script: source tools/emsdk_portable/emsdk_env.sh && make && make test
+script: source tools/emsdk_portable/emsdk_env.sh && make
 
 deploy:
   provider: releases
