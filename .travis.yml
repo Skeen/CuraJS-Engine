@@ -5,7 +5,9 @@ sudo: false
 
 install: ./tools/emscripten.sh
 
-script: ./tools/emsdk_portable/emsdk activate latest && source ./tools/emsdk_portable/emsdk_env.sh && make && make test
+before_script: ./tools/emscripten_debug.sh
+
+script: source tools/emsdk_portable/emsdk_env.sh && make && make test
 
 deploy:
   provider: releases
