@@ -1,5 +1,7 @@
 This branch holds a JavaScript compilation for CuraEngine (legacy) using Emscripten.
 
+See 'releases' for compilation output.
+
 CuraEngine
 ==========
 The CuraEngine is a C++ console application for 3D printing GCode generation. It has been made as a better and faster alternative to the old Skeinforge engine.
