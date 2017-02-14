@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/Skeen/CuraJS-Engine.svg?branch=master)](https://travis-ci.org/Skeen/CuraJS-Engine)
+
 This branch holds a JavaScript compilation for CuraEngine (legacy) using Emscripten.
 
 See 'releases' for compilation output.
