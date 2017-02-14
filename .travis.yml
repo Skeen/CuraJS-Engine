@@ -7,10 +7,6 @@ install: ./tools/emscripten.sh
 
 script: ./tools/emsdk_portable/emsdk activate latest && source ./tools/emsdk_portable/emsdk_env.sh && make && make test
 
-cache:
-    directories:
-        - tools/emsdk_portable/
-
 deploy:
   provider: releases
   api_key:
